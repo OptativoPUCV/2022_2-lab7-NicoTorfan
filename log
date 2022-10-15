@@ -256,3 +256,15 @@ heap.c:53:12: error: ‘son2’ is used uninitialized in this function [-Werror=
 cc1: all warnings being treated as errors
 Compilation failed
 63f44b9
+Sat 15 Oct 2022 02:23:34 AM UTC: 
+ heap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:60:29: error: ‘son2’ undeclared (first use in this function); did you mean ‘son’?
+   60 |   while (son1 < pq->size || son2 < pq->size){
+      |                             ^~~~
+      |                             son
+heap.c:60:29: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+7f2bed8
