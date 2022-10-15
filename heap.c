@@ -38,7 +38,6 @@ void heap_push(Heap* pq, void* data, int priority){
     fatherD=(fatherD - 1)/2;
     father= trunc(fatherD);
   }
-  if
   pq->size=pq->size+1;
 }
 

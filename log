@@ -30,3 +30,9 @@ heap.c:42:3: error: expected ‘(’ before ‘pq’
       |   (
 Compilation failed
 a51870f
+Sat 15 Oct 2022 01:00:10 AM UTC: 
+ heap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  4|2
+total_score: 30/70
+68a6982
