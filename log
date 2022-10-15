@@ -282,3 +282,9 @@ heap.c:53:13: error: ‘son23’ is used uninitialized in this function [-Werror
 cc1: all warnings being treated as errors
 Compilation failed
 83199a4
+Sat 15 Oct 2022 02:24:11 AM UTC: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  7|1
+total_score: 50/70
+63b1999

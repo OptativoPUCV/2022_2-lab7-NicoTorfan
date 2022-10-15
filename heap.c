@@ -50,17 +50,17 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
   heapElem aux;
-  int son1 ,son23 ,son=0,father=0;
+  int son1=0 ,son2=0 ,son=0,father=0;
   pq->size=pq->size-1;
   aux=pq->heapArray[pq->size];
   pq->heapArray[pq->size]=pq->heapArray[0];
   pq->heapArray[0]=aux;
   pq->heapArray[pq->size].data=NULL;
   pq->heapArray[pq->size].priority=0;
-  while (son1 < pq->size || son23 < pq->size){
+  while (son1 < pq->size || son2 < pq->size){
     son1 = 2*son + 1;
-    son23 = 2*son + 2;
-    if(son23>son1) son=son23;
+    son2 = 2*son + 2;
+    if(son2>son1) son=son2;
     else son=son1;
     if (son>father){
       aux=pq->heapArray[father];
