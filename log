@@ -242,3 +242,17 @@ Sat 15 Oct 2022 02:19:53 AM UTC:
  tests:  7|1
 total_score: 50/70
 9643fdd
+Sat 15 Oct 2022 02:22:50 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_pop’:
+heap.c:53:7: error: ‘son1’ is used uninitialized in this function [-Werror=uninitialized]
+   53 |   int son1,son2,son=0,father=0;
+      |       ^~~~
+heap.c:53:12: error: ‘son2’ is used uninitialized in this function [-Werror=uninitialized]
+   53 |   int son1,son2,son=0,father=0;
+      |            ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+63f44b9
