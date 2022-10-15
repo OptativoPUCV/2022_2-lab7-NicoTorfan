@@ -54,7 +54,7 @@ void heap_pop(Heap* pq){
   aux=pq->heapArray[pq->size];
   pq->heapArray[pq->size]=pq->heapArray[0];
   pq->heapArray[0]=aux;
-  pq->heapArray[pq->size]=NULL;
+  pq->heapArray[pq->size]=0;
   pq->size=pq->size-1;
 }
 
