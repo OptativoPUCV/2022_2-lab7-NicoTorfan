@@ -19,3 +19,14 @@ Sat 15 Oct 2022 12:56:02 AM UTC:
  tests:  4|2
 total_score: 30/70
 ec0e2c9
+Sat 15 Oct 2022 12:59:56 AM UTC: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:42:3: error: expected ‘(’ before ‘pq’
+   42 |   pq->size=pq->size+1;
+      |   ^~
+      |   (
+Compilation failed
+a51870f
