@@ -1,0 +1,15 @@
+Sat 15 Oct 2022 12:55:33 AM UTC: 
+ heap.c | 30 +++++++++++++++++++++++-------
+ 1 file changed, 23 insertions(+), 7 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:31:15: error: implicit declaration of function ‘trunc’ [-Werror=implicit-function-declaration]
+   31 |   int father= trunc(fatherD);
+      |               ^~~~~
+heap.c:31:15: error: incompatible implicit declaration of built-in function ‘trunc’ [-Werror]
+heap.c:1:1: note: include ‘<math.h>’ or provide a declaration of ‘trunc’
+  +++ |+#include <math.h>
+    1 | #include <stdio.h>
+cc1: all warnings being treated as errors
+Compilation failed
+0cea264

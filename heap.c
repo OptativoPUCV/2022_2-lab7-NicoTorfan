@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
-#include <ctype.h>
-#include "heap.h"
 
 typedef struct nodo{
    void* data;
@@ -18,13 +15,29 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
-    return NULL;
+  void *top;
+  top=pq->heapArray[0].data;
+  if (pq->size==0) return NULL;
+    return top;
 }
 
 
 
 void heap_push(Heap* pq, void* data, int priority){
-
+  pq->heapArray[pq->size].data=data;
+  pq->heapArray[pq->size].priority=priority;
+  heapElem aux;
+  double fatherD=(pq->size -1 )/2;
+  int father= trunc(fatherD);
+  while (pq->heapArray[father].priority < priority){
+    if(pq->heapArray[father].priority >= priority) break;
+    aux=pq->heapArray[father];
+    pq->heapArray[father]=pq->heapArray[pq->size];
+    pq->heapArray[pq->size]=aux;
+    fatherD=(fatherD - 1)/2;
+    father= trunc(fatherD);
+  }
+  pq->size=pq->size+1;
 }
 
 
@@ -33,6 +46,9 @@ void heap_pop(Heap* pq){
 }
 
 Heap* createHeap(){
-
-   return NULL;
+  Heap * heap = (Heap*) malloc(sizeof(Heap));
+  heap->heapArray= (heapElem*) malloc(3*sizeof(heapElem));
+  heap->size=0;
+  heap->capac=3;
+  return heap;
 }
