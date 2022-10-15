@@ -33,16 +33,14 @@ void heap_push(Heap* pq, void* data, int priority){
   }
   heapElem aux;
   int ub=pq->size;
-  double fatherD=(pq->size -1 )/2;
-  int father= trunc(fatherD);
+  int father=(pq->size - 1)/2;
   while (pq->heapArray[father].priority < priority){
     if(pq->heapArray[father].priority > priority) break;
     aux=pq->heapArray[father];
     pq->heapArray[father]=pq->heapArray[ub];
     pq->heapArray[ub]=aux;
     ub = father;
-    fatherD=(fatherD - 1)/2;
-    father= trunc(fatherD);
+    father=(father - 1)/2;
   }
   pq->size=pq->size+1;
 }
