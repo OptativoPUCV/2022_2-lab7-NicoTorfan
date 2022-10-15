@@ -36,9 +36,9 @@ void heap_push(Heap* pq, void* data, int priority){
     aux=pq->heapArray[father];
     pq->heapArray[father]=pq->heapArray[ub];
     pq->heapArray[ub]=aux;
+    ub = father;
     fatherD=(fatherD - 1)/2;
     father= trunc(fatherD);
-    ub=father;
   }
   if(pq->heapArray[0].priority <= priority){
     aux=pq->heapArray[0];
