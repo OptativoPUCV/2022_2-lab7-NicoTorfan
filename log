@@ -111,3 +111,13 @@ Sat 15 Oct 2022 01:12:32 AM UTC:
  tests:  6|2
 total_score: 35/70
 84d2179
+Sat 15 Oct 2022 01:12:53 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:30:17: error: lvalue required as left operand of assignment
+   30 |   if (pq->size+1=pq->capac){
+      |                 ^
+Compilation failed
+3a78f40
