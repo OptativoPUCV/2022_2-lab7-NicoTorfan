@@ -207,3 +207,9 @@ heap.c:52:7: error: unused variable ‘son’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d7b77b0
+Sat 15 Oct 2022 01:46:20 AM UTC: 
+ heap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  7|1
+total_score: 45/70
+9ce3ffc
