@@ -68,6 +68,7 @@ void heap_pop(Heap* pq){
       pq->heapArray[son]=aux;
       father=son;
     }
+    else break;
   }
 }
 
