@@ -83,3 +83,13 @@ Sat 15 Oct 2022 01:11:24 AM UTC:
  tests:  5|2
 total_score: 35/70
 23185c0
+Sat 15 Oct 2022 01:11:46 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:31:19: error: expected identifier before ‘(’ token
+   31 |     pq->capac=pq->(capac*2)+1;
+      |                   ^
+Compilation failed
+4127676
