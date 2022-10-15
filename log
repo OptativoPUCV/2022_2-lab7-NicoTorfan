@@ -13,3 +13,9 @@ heap.c:1:1: note: include ‘<math.h>’ or provide a declaration of ‘trunc’
 cc1: all warnings being treated as errors
 Compilation failed
 0cea264
+Sat 15 Oct 2022 12:56:02 AM UTC: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  4|2
+total_score: 30/70
+ec0e2c9
