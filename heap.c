@@ -28,20 +28,22 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[pq->size].data=data;
   pq->heapArray[pq->size].priority=priority;
   heapElem aux;
+  int ub=pq->size;
   double fatherD=(pq->size -1 )/2;
   int father= trunc(fatherD);
   while (pq->heapArray[father].priority < priority){
     if(pq->heapArray[father].priority > priority) break;
     aux=pq->heapArray[father];
-    pq->heapArray[father]=pq->heapArray[pq->size];
-    pq->heapArray[pq->size]=aux;
+    pq->heapArray[father]=pq->heapArray[ub];
+    pq->heapArray[ub]=aux;
     fatherD=(fatherD - 1)/2;
     father= trunc(fatherD);
+    ub=father;
   }
-  if(pq->heapArray[0].priority<=priority){
+  if(pq->heapArray[0].priority <= priority){
     aux=pq->heapArray[0];
-    pq->heapArray[0]=pq->heapArray[pq->size];
-    pq->heapArray[pq->size]=aux;
+    pq->heapArray[0]=pq->heapArray[ub];
+    pq->heapArray[ub]=aux;
   }
   pq->size=pq->size+1;
 }
