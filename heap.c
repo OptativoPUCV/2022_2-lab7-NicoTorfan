@@ -62,9 +62,9 @@ void heap_pop(Heap* pq){
     son2 = 2*father + 2;
     if (son1>pq->size) pq->heapArray[son1].priority= 0;
     if (son2>pq->size) pq->heapArray[son2].priority= 0;
-    if(pq->heapArray[son2].priority>son1) son=son2;
+    if(pq->heapArray[son2].priority > pq->heapArray[son1].priority ) son=son2;
     else son=son1;
-    if (pq->heapArray[son].priority>pq->heapArray[father].priority){
+    if (pq->heapArray[son].priority > pq->heapArray[father].priority){
       aux=pq->heapArray[father];
       pq->heapArray[father]=pq->heapArray[son];
       pq->heapArray[son]=aux;
