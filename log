@@ -36,3 +36,20 @@ Sat 15 Oct 2022 01:00:10 AM UTC:
  tests:  4|2
 total_score: 30/70
 68a6982
+Sat 15 Oct 2022 01:01:55 AM UTC: 
+ heap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:42:24: error: expected ‘]’ before ‘;’ token
+   42 |     aux=pq->heapArray[0;
+      |                        ^
+      |                        ]
+heap.c:44:33: error: expected ‘;’ before ‘}’ token
+   44 |     pq->heapArray[pq->size]=aux;
+      |                                 ^
+      |                                 ;
+   45 |   }
+      |   ~                              
+Compilation failed
+0e496c0
