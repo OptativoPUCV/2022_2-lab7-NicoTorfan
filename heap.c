@@ -57,7 +57,7 @@ void heap_pop(Heap* pq){
   pq->heapArray[0]=aux;
   pq->heapArray[pq->size].data=NULL;
   pq->heapArray[pq->size].priority=0;
-  while (son1 < pq->size || son2 < pq->size){
+  while (son1 < pq->size || son23 < pq->size){
     son1 = 2*son + 1;
     son23 = 2*son + 2;
     if(son23>son1) son=son23;
